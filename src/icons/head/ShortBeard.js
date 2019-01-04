@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgShortBeard = props => (
-  <svg width="136px" height="104px" viewBox="0 0 136 104" {...props}>
-    <title>{"Head/Front/Short Beard"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Head/Front/Short-Beard"
       stroke="none"
@@ -20,7 +17,6 @@ const SvgShortBeard = props => (
         fill="#191847"
       />
     </g>
-  </svg>
 );
 
 export default SvgShortBeard;

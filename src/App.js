@@ -3,10 +3,7 @@ import FlavorForm from './flavor-form';
 import NameForm from './name-form';
 import Reservation from './reservation';
 import Calculator from './calculator';
-import SvgHoodie from './icons/Hoodie';
-import SvgUpright from './icons/upright';
-import SvgAfro from './icons/Afro';
-import SvgBaggyPants from './icons/BaggyPants';
+import SittingHuman from './sitting-human';
 import './App.css';
 
 
@@ -29,10 +26,7 @@ class App extends Component {
           <FlavorForm />
           <Reservation />
           <Calculator />
-          <SvgUpright />
-          <SvgAfro />
-          <SvgHoodie />
-          <SvgBaggyPants />
+          <SittingHuman />
         </header>
       </div>
     );

@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgRad = props => (
-  <svg width="136px" height="104px" viewBox="0 0 136 104" {...props}>
-    <title>{"Head/Front/Rad"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Head/Front/Rad"
       stroke="none"
@@ -21,7 +18,6 @@ const SvgRad = props => (
         transform="translate(70.000000, 43.500000) scale(-1, 1) translate(-70.000000, -43.500000) "
       />
     </g>
-  </svg>
 );
 
 export default SvgRad;

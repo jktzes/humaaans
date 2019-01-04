@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgSkirt = props => (
-  <svg width="300px" height="239px" viewBox="0 0 300 239" {...props}>
-    <title>{"Bottom/Standing/Skirt"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Bottom/Standing/Skirt"
       stroke="none"
@@ -52,7 +49,6 @@ const SvgSkirt = props => (
         fill="#2B44FF"
       />
     </g>
-  </svg>
 );
 
 export default SvgSkirt;

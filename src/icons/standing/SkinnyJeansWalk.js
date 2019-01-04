@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgSkinnyJeansWalk = props => (
-  <svg width="300px" height="239px" viewBox="0 0 300 239" {...props}>
-    <title>{"Bottom/Standing/Skinny Jeans Walk"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Bottom/Standing/Skinny-Jeans-Walk"
       stroke="none"
@@ -42,7 +39,6 @@ const SvgSkinnyJeansWalk = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgSkinnyJeansWalk;

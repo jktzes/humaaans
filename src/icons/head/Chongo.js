@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgChongo = props => (
-  <svg width="136px" height="104px" viewBox="0 0 136 104" {...props}>
-    <title>{"Head/Front/Chongo"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Head/Front/Chongo"
       stroke="none"
@@ -20,7 +17,6 @@ const SvgChongo = props => (
         fill="#191847"
       />
     </g>
-  </svg>
 );
 
 export default SvgChongo;

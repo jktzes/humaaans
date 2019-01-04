@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgTrenchCoat = props => (
-  <svg width="256px" height="187px" viewBox="0 0 256 187" {...props}>
-    <title>{"Body/Trench Coat"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Body/Trench-Coat"
       stroke="none"
@@ -45,7 +42,6 @@ const SvgTrenchCoat = props => (
         fill="#000000"
       />
     </g>
-  </svg>
 );
 
 export default SvgTrenchCoat;

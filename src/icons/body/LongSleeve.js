@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgLongSleeve = props => (
-  <svg width="256px" height="187px" viewBox="0 0 256 187" {...props}>
-    <title>{"Body/Long Sleeve"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Body/Long-Sleeve"
       stroke="none"
@@ -34,7 +31,6 @@ const SvgLongSleeve = props => (
         fill="#000000"
       />
     </g>
-  </svg>
 );
 
 export default SvgLongSleeve;

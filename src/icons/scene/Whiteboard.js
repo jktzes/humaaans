@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgWhiteboard = props => (
-  <svg width="740px" height="680px" viewBox="0 0 740 680" {...props}>
-    <title>{"Scene/Whiteboard"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Scene/Whiteboard"
       stroke="none"
@@ -628,7 +625,6 @@ const SvgWhiteboard = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgWhiteboard;

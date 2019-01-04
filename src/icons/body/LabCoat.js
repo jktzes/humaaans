@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgLabCoat = props => (
-  <svg width="256px" height="187px" viewBox="0 0 256 187" {...props}>
-    <title>{"Body/Lab Coat"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Body/Lab-Coat"
       stroke="none"
@@ -33,7 +30,6 @@ const SvgLabCoat = props => (
         fill="#DDE3E9"
       />
     </g>
-  </svg>
 );
 
 export default SvgLabCoat;

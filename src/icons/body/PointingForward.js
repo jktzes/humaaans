@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgPointingForward = props => (
-  <svg width="256px" height="187px" viewBox="0 0 256 187" {...props}>
-    <title>{"Body/Pointing Forward"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Body/Pointing-Forward"
       stroke="none"
@@ -28,7 +25,6 @@ const SvgPointingForward = props => (
         fill="#1F28CF"
       />
     </g>
-  </svg>
 );
 
 export default SvgPointingForward;

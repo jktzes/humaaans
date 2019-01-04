@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgJogging = props => (
-  <svg width="300px" height="239px" viewBox="0 0 300 239" {...props}>
-    <title>{"Bottom/Standing/Jogging"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Bottom/Standing/Jogging"
       stroke="none"
@@ -52,7 +49,6 @@ const SvgJogging = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgJogging;

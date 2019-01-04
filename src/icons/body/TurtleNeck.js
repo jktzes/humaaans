@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgTurtleNeck = props => (
-  <svg width="256px" height="187px" viewBox="0 0 256 187" {...props}>
-    <title>{"Body/Turtle Neck"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Body/Turtle-Neck"
       stroke="none"
@@ -28,7 +25,6 @@ const SvgTurtleNeck = props => (
         fill="#FF4133"
       />
     </g>
-  </svg>
 );
 
 export default SvgTurtleNeck;

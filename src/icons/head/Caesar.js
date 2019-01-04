@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgCaesar = props => (
-  <svg width="136px" height="104px" viewBox="0 0 136 104" {...props}>
-    <title>{"Head/Front/Caesar"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Head/Front/Caesar"
       stroke="none"
@@ -20,7 +17,6 @@ const SvgCaesar = props => (
         fill="#191847"
       />
     </g>
-  </svg>
 );
 
 export default SvgCaesar;

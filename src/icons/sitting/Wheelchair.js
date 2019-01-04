@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgWheelchair = props => (
-  <svg width="300px" height="239px" viewBox="0 0 300 239" {...props}>
-    <title>{"Bottom/Sitting/Wheelchair"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Bottom/Sitting/Wheelchair"
       stroke="none"
@@ -99,7 +96,6 @@ const SvgWheelchair = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgWheelchair;

@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgHijab1 = props => (
-  <svg width="136px" height="104px" viewBox="0 0 136 104" {...props}>
-    <title>{"Head/Front/Hijab 1"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Head/Front/Hijab-1"
       stroke="none"
@@ -33,7 +30,6 @@ const SvgHijab1 = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgHijab1;

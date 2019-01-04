@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgLong = props => (
-  <svg width="136px" height="104px" viewBox="0 0 136 104" {...props}>
-    <title>{"Head/Front/Long"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Head/Front/Long"
       stroke="none"
@@ -25,7 +22,6 @@ const SvgLong = props => (
         fill="#191847"
       />
     </g>
-  </svg>
 );
 
 export default SvgLong;

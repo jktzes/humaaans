@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgPlants = props => (
-  <svg width="740px" height="680px" viewBox="0 0 740 680" {...props}>
-    <title>{"Scene/Plants"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Scene/Plants"
       stroke="none"
@@ -140,7 +137,6 @@ const SvgPlants = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgPlants;

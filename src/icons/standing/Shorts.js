@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgShorts = props => (
-  <svg width="300px" height="239px" viewBox="0 0 300 239" {...props}>
-    <title>{"Bottom/Standing/Shorts"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Bottom/Standing/Shorts"
       stroke="none"
@@ -52,7 +49,6 @@ const SvgShorts = props => (
         fill="#89C5CC"
       />
     </g>
-  </svg>
 );
 
 export default SvgShorts;

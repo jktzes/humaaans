@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgJacket = props => (
-  <svg width="256px" height="187px" viewBox="0 0 256 187" {...props}>
-    <title>{"Body/Jacket"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Body/Jacket"
       stroke="none"
@@ -45,7 +42,6 @@ const SvgJacket = props => (
         points="103.110899 104 128 92.4292718 128 104"
       />
     </g>
-  </svg>
 );
 
 export default SvgJacket;

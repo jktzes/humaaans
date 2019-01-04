@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgWireframe = props => (
-  <svg width="740px" height="680px" viewBox="0 0 740 680" {...props}>
-    <title>{"Scene/Wireframe"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Scene/Wireframe"
       stroke="none"
@@ -858,7 +855,6 @@ const SvgWireframe = props => (
         <circle id="Sun" fill="#FFFFFF" cx={110.5} cy={31.5} r={13.5} />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgWireframe;

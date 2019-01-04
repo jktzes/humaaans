@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgHome = props => (
-  <svg width="740px" height="680px" viewBox="0 0 740 680" {...props}>
-    <title>{"Scene/Home"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Scene/Home"
       stroke="none"
@@ -299,7 +296,6 @@ const SvgHome = props => (
         </g>
       </g>
     </g>
-  </svg>
 );
 
 export default SvgHome;

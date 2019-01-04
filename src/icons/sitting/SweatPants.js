@@ -1,9 +1,6 @@
 import React from "react";
 
 const SvgSweatPants = props => (
-  <svg width="300px" height="239px" viewBox="0 0 300 239" {...props}>
-    <title>{"Bottom/Sitting/Sweat Pants"}</title>
-    <desc>{"Created with Sketch."}</desc>
     <g
       id="Bottom/Sitting/Sweat-Pants"
       stroke="none"
@@ -54,7 +51,6 @@ const SvgSweatPants = props => (
         />
       </g>
     </g>
-  </svg>
 );
 
 export default SvgSweatPants;
