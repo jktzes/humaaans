@@ -26,7 +26,7 @@ class App extends Component {
           <FlavorForm />
           <Reservation />
           <Calculator />
-          <SittingHuman />
+          <SittingHuman head='Curly' torso='Hoodie' bottom='BaggyPants'/>
         </header>
       </div>
     );
