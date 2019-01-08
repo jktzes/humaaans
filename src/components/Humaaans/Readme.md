@@ -1,10 +1,18 @@
-Sitting to Standing:
+Face to face humans:
 ```
-<Human posture="sitting" size="400" direction="right" head="Afro" torso="Hoodie" bottom="SkinnyJeans1" />
-<Human posture="standing" size="400" direction="left" head="Airy" torso="Jacket" bottom="Skirt"  />
+<Human posture="sitting" size="300" direction="right" head="Afro" torso="Hoodie" bottom="SkinnyJeans1" />
+<Human posture="standing" size="300" direction="left" head="Airy" torso="Jacket" bottom="Jogging"  />
 ```
-Sitting to Sitting:
+A sitting human:
 ```
-<Human posture="sitting" size="400" direction="left" head="Afro" torso="Hoodie" bottom="SkinnyJeans1" />
-<Human posture="sitting" size="400" direction="right" head="Airy" torso="LabCoat" bottom="BaggyPants"  />
+<Human posture="sitting" size="300" head="Curly" torso="TrenchCoat" bottom="BaggyPants" />
 ```
+A standing human:
+```
+<Human size="300" head="ShortBeard" torso="TurtleNeck" bottom="Sweatpants" />
+```
+A human with wheels:
+```
+<Human posture="sitting" size="300" head="Turban1" torso="LongSleeve" bottom="Wheelchair" />
+```
+
