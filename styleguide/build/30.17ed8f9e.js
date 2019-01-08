@@ -1,0 +1,15 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[30],{
+
+/***/ "./src/components/Humaaans/icons/standing/SkinnyJeansWalk.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/Humaaans/icons/standing/SkinnyJeansWalk.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar SvgSkinnyJeansWalk = function SvgSkinnyJeansWalk(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"g\", {\n    id: \"Bottom/Standing/Skinny-Jeans-Walk\",\n    stroke: \"none\",\n    strokeWidth: 1,\n    fill: \"none\",\n    fillRule: \"evenodd\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"polygon\", {\n    id: \"Leg\",\n    fill: \"#1F28CF\",\n    points: \"128 0 176.081639 127.226909 209.783329 221 229 221 182.673688 9.81437154e-14\"\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"path\", {\n    d: \"M116.116628,0 C115.593979,43.6541888 115.971833,102.427468 114.754071,105.148648 C113.942229,106.962768 88.6908725,127.632305 39,167.157257 L48.9049803,184 C107.899481,145.955797 138.9048,124.399339 141.920937,119.330628 C146.445143,111.72756 169.1744,41.763137 181,0 L116.116628,0 Z\",\n    id: \"Leg\",\n    fill: \"#2B44FF\"\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"g\", {\n    id: \"Accessories/Shoe/Flat-Pointy\",\n    transform: \"translate(56.500000, 189.000000) rotate(50.000000) translate(-56.500000, -189.000000) translate(26.000000, 169.000000)\",\n    fill: \"#191847\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"path\", {\n    d: \"M0,40 L1,19 L22,19 C31.9576033,26 44.9576033,31.6666667 61,36 L61,40 L23,40 L10,38 L10,40 L0,40 Z\",\n    id: \"Shoe\"\n  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"g\", {\n    id: \"Accessories/Shoe/Flat-Pointy\",\n    transform: \"translate(208.000000, 199.000000)\",\n    fill: \"#191847\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"path\", {\n    d: \"M0,40 L1,19 L22,19 C31.9576033,26 44.9576033,31.6666667 61,36 L61,40 L23,40 L10,38 L10,40 L0,40 Z\",\n    id: \"Shoe\"\n  })));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (SvgSkinnyJeansWalk);\n\n//# sourceURL=webpack:///./src/components/Humaaans/icons/standing/SkinnyJeansWalk.js?");
+
+/***/ })
+
+}]);
