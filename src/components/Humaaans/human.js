@@ -40,6 +40,8 @@ function setHeigthToWidthRatioFromPosture(posture){
 function setHorizontalDirection(direction){
 	if (direction === DIRECTION_OPTION_LEFT){
     return ("translate(190.000000, 200.500000) scale(-1, 1) translate(-190.000000, -200.500000)");
+  } else {
+    return ("") 
   }
 }
 
@@ -56,10 +58,6 @@ function setBottomDirectory(posture){
   return(ASSET_ROOT_DIRECTORY + bottomSuffix)
 }
 
-function setRotation(degrees){
-	return (`rotate(${parseFloat(degrees)})`)
-}
-
 class Human extends React.Component { 
 	render() {
 
@@ -69,13 +67,11 @@ class Human extends React.Component {
     let bottom = this.props.bottom
     let posture = this.props.posture
     let direction = this.props.direction
-    let clockwiseRotation = this.props.clockwiseRotation
 
 		let height = setHeightFromSizeAndPosture(size, posture);
     let heightAdjustFromPosture = setHeightAdjustmentFromPosture(posture);
     let horizontalDirectionModifier = setHorizontalDirection(direction)
 		let viewBox = setViewBox(posture);
-		let rotation = setRotation(clockwiseRotation) || 0; 
 
 		const Head = Loadable({
 			loader: () => import(`${ASSET_ROOT_DIRECTORY}${HEAD_DIRECTORY_SUFFIX}${head}`),
@@ -95,13 +91,12 @@ class Human extends React.Component {
 		return(
 			<svg height={height} 
 				width={size || DEFAULT_WIDTH_IN_PX} 
-        transform={rotation}
 				version="1.1" 
 				viewBox={viewBox} 
 				xmlns="http://www.w3.org/2000/svg">
 				<g id="humaaans"  fillRule="evenodd" strokeWidth="1">
 					<g id={`a-${posture}-human`} 
-						transform={horizontalDirectionModifier + heightAdjustFromPosture}>
+						transform={`${horizontalDirectionModifier} ${heightAdjustFromPosture}`}>
             <g id="HEAD" transform="translate(82.000000, 0.000000)">
               <Head />
             </g>
@@ -127,7 +122,6 @@ Human.propTypes = {
   posture: PropTypes.string,
   direction: PropTypes.string,
 
-  clockwiseRotation: PropTypes.number
 }
 
 export default Human;
