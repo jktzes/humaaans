@@ -1,6 +1,7 @@
 import React from "react";
 import Loadable from 'react-loadable';
 import Loading from './Loading';
+import PropTypes from 'prop-types'
 
 const DEFAULT_WIDTH_IN_PX = 380; 
 const DEFAULT_SITTING_HEIGHT_IN_PX = 400;
@@ -17,33 +18,37 @@ const STANDING_DIRECTORY_SUFFIX = 'standing/'
 const STANDING_HEIGHT_TO_WIDTH_RATIO = DEFAULT_STANDING_HEIGHT_IN_PX/DEFAULT_WIDTH_IN_PX;
 const SITTING_HEIGHT_TO_WIDTH_RATIO = DEFAULT_SITTING_HEIGHT_IN_PX/DEFAULT_WIDTH_IN_PX;
 
-function setLayoutFromDirectionAndPosture(direction, posture){
-	// the deafult is face-right since it requires less code
-  var heightAdjustment = posture === POSTURE_OPTION_SITTING ? SITTING_HEIGHT_ADJUSTMENT_IN_PX : STANDING_HEIGHT_ADJUSTMENT_IN_PX 
-  var horizontalFlip = "translate(190.000000, 200.500000) scale(-1, 1) translate(-190.000000, -200.500000)"
-
-	if (direction === DIRECTION_OPTION_LEFT){
-		return( `${horizontalFlip} translate(40.000000, ${heightAdjustment})`)
-	} else {
-		return (`translate(40.000000, ${heightAdjustment})`);
-	} }
-
 function setHeightFromSizeAndPosture(size, posture){
   let width = size || DEFAULT_WIDTH_IN_PX;
+  let heightToWidthRatio = setHeigthToWidthRatioFromPosture(posture) 
+  return( width * heightToWidthRatio);
+}
 
-  if (posture === POSTURE_OPTION_SITTING){
-    return( width * SITTING_HEIGHT_TO_WIDTH_RATIO );
-  } else {
-    return ( width * STANDING_HEIGHT_TO_WIDTH_RATIO );
+function setHeightAdjustmentFromPosture(posture){
+ let heightAdjustment = posture === POSTURE_OPTION_SITTING 
+                                    ? SITTING_HEIGHT_ADJUSTMENT_IN_PX 
+                                    : STANDING_HEIGHT_ADJUSTMENT_IN_PX;
+  return(`translate(40.000000, ${heightAdjustment})`);
+}
+
+function setHeigthToWidthRatioFromPosture(posture){
+ return (posture === POSTURE_OPTION_SITTING 
+                     ? SITTING_HEIGHT_TO_WIDTH_RATIO
+                     : STANDING_HEIGHT_TO_WIDTH_RATIO)
+}
+
+function setHorizontalDirection(direction){
+	if (direction === DIRECTION_OPTION_LEFT){
+    return ("translate(190.000000, 200.500000) scale(-1, 1) translate(-190.000000, -200.500000)");
   }
 }
 
 function setViewBox(posture){
-	if (posture === POSTURE_OPTION_SITTING) { 
-		return( `0 0 ${DEFAULT_WIDTH_IN_PX} ${DEFAULT_SITTING_HEIGHT_IN_PX}` );
-  } else {
-		return( `0 0 ${DEFAULT_WIDTH_IN_PX} ${DEFAULT_STANDING_HEIGHT_IN_PX}` );
-	}
+  var height = posture === POSTURE_OPTION_SITTING
+               ? DEFAULT_SITTING_HEIGHT_IN_PX
+               : DEFAULT_STANDING_HEIGHT_IN_PX;
+
+  return( `0 0 ${DEFAULT_WIDTH_IN_PX} ${height}` );
 }
 
 function setBottomDirectory(posture){
@@ -57,36 +62,46 @@ function setRotation(degrees){
 
 class Human extends React.Component { 
 	render() {
+
+    let size = this.props.size
+    let head = this.props.head
+    let torso = this.props.torso
+    let bottom = this.props.bottom
+    let posture = this.props.posture
+    let direction = this.props.direction
+    let clockwiseRotation = this.props.clockwiseRotation
+
+		let height = setHeightFromSizeAndPosture(size, posture);
+    let heightAdjustFromPosture = setHeightAdjustmentFromPosture(posture);
+    let horizontalDirectionModifier = setHorizontalDirection(direction)
+		let viewBox = setViewBox(posture);
+		let rotation = setRotation(clockwiseRotation) || 0; 
+
 		const Head = Loadable({
-			loader: () => import(`${ASSET_ROOT_DIRECTORY}${HEAD_DIRECTORY_SUFFIX}${this.props.head}`),
+			loader: () => import(`${ASSET_ROOT_DIRECTORY}${HEAD_DIRECTORY_SUFFIX}${head}`),
 			loading: Loading
 		});
 
 		const Torso = Loadable({
-			loader: () => import(`${ASSET_ROOT_DIRECTORY}${TORSO_DIRECTORY_SUFFIX}${this.props.torso}`),
+			loader: () => import(`${ASSET_ROOT_DIRECTORY}${TORSO_DIRECTORY_SUFFIX}${torso}`),
 			loading: Loading
 		});
 
 		const Bottom = Loadable({
-			loader: () => import(`${setBottomDirectory(this.props.posture)}${this.props.bottom}`),
+			loader: () => import(`${setBottomDirectory(posture)}${bottom}`),
 			loading: Loading
 		});
 
-		let layoutModifier = setLayoutFromDirectionAndPosture(this.props.direction, this.props.posture);
-		let height = setHeightFromSizeAndPosture(this.props.size, this.props.posture);
-		let viewBox = setViewBox(this.props.posture);
-		let rotation = setRotation(this.props.clockwiseRotate) || 0; 
-
 		return(
 			<svg height={height} 
-				width={this.props.size || DEFAULT_WIDTH_IN_PX} 
+				width={size || DEFAULT_WIDTH_IN_PX} 
+        transform={rotation}
 				version="1.1" 
 				viewBox={viewBox} 
-				transform={rotation} 
 				xmlns="http://www.w3.org/2000/svg">
-				<g id="humaaans" fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
-					<g id={`a-${this.props.posture}-human`} 
-						transform={layoutModifier}>
+				<g id="humaaans"  fillRule="evenodd" strokeWidth="1">
+					<g id={`a-${posture}-human`} 
+						transform={horizontalDirectionModifier + heightAdjustFromPosture}>
             <g id="HEAD" transform="translate(82.000000, 0.000000)">
               <Head />
             </g>
@@ -101,6 +116,18 @@ class Human extends React.Component {
 			</svg>
 		)
 	}
+}
+
+Human.propTypes = {
+  size: PropTypes.number,
+
+  head: PropTypes.string,
+  torso: PropTypes.string,
+  bottom: PropTypes.string,
+  posture: PropTypes.string,
+  direction: PropTypes.string,
+
+  clockwiseRotation: PropTypes.number
 }
 
 export default Human;

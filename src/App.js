@@ -7,24 +7,21 @@ class App extends Component {
     return (
       [
           <Human 
+            size={600}
             posture='sitting'
-            size='600'
             head='Turban2' 
             torso='Hoodie' 
             bottom='BaggyPants'
           />
         ,
           <Human 
-            size='600'
+            size={600}
             head='Turban2' 
             torso='Hoodie' 
             bottom='Skirt'
             direction='left'
           />
-
-
       ]
-
     );
   }
 }
