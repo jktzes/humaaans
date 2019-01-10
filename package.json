@@ -1,7 +1,8 @@
 {
   "name": "humaaans",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.6.0",
+  "main": "lib/human.js",
+  "module": "lib/huamn.js",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -26,6 +27,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "react-styleguidist": "^8.0.6"
   }
 }
