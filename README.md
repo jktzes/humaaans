@@ -1,4 +1,4 @@
-# Humaaans: Create Human Illustrations With Ease.
+# Humaaans: Create Human Illustrations With Ease in React.
 
 ## Demo
 # ![Demo](https://humaaans.s3.amazonaws.com//demo.gif)
@@ -16,3 +16,6 @@ Use it:
 ```
 <Human head="Afro" torso="Hoodie" bottom="BaggyPants" />
 ```
+
+## Credits
+This react-compoennt library is based on Pablo Stanley's humaaans library.
