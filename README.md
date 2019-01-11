@@ -1,9 +1,9 @@
-# Humaaans: Create Human Illustration With Ease.
+# Humaaans: Create Human Illustrations With Ease.
 
-# Demo
+## Demo
 # ![Demo](https://humaaans.s3.amazonaws.com//demo.gif)
 
-# Get Started
+## Get Started
 Install from NPM:
 ```
 npm install --save-dev humaaans
