@@ -59,44 +59,44 @@ function setBottomDirectory(posture){
 }
 
 class Human extends React.Component { 
-	render() {
+  render() { 
+    let size = this.props.size;
+    let head = this.props.head;
+    let torso = this.props.torso;
+    let bottom = this.props.bottom;
+    let posture = this.props.posture;
+    let direction = this.props.direction;
 
-    let size = this.props.size
-    let head = this.props.head
-    let torso = this.props.torso
-    let bottom = this.props.bottom
-    let posture = this.props.posture
-    let direction = this.props.direction
-
-		let height = setHeightFromSizeAndPosture(size, posture);
-    let heightAdjustFromPosture = setHeightAdjustmentFromPosture(posture);
+    let height = setHeightFromSizeAndPosture(size, posture);
+    let heightAdjustmentFromPosture = setHeightAdjustmentFromPosture(posture);
     let horizontalDirectionModifier = setHorizontalDirection(direction)
-		let viewBox = setViewBox(posture);
+    let viewBox = setViewBox(posture);
 
-		const Head = Loadable({
-			loader: () => import(`${ASSET_ROOT_DIRECTORY}${HEAD_DIRECTORY_SUFFIX}${head}`),
-			loading: Loading
-		});
+		
+    const Head = Loadable({
+      loader: () => import(`${ASSET_ROOT_DIRECTORY}${HEAD_DIRECTORY_SUFFIX}${head}`),
+      loading: Loading
+    });
 
-		const Torso = Loadable({
-			loader: () => import(`${ASSET_ROOT_DIRECTORY}${TORSO_DIRECTORY_SUFFIX}${torso}`),
-			loading: Loading
-		});
+    const Torso = Loadable({
+      loader: () => import(`${ASSET_ROOT_DIRECTORY}${TORSO_DIRECTORY_SUFFIX}${torso}`),
+      loading: Loading
+    });
 
-		const Bottom = Loadable({
-			loader: () => import(`${setBottomDirectory(posture)}${bottom}`),
-			loading: Loading
-		});
+    const Bottom = Loadable({
+      loader: () => import(`${setBottomDirectory(posture)}${bottom}`),
+      loading: Loading
+    });
 
 		return(
-			<svg height={height} 
-				width={size || DEFAULT_WIDTH_IN_PX} 
-				version="1.1" 
-				viewBox={viewBox} 
-				xmlns="http://www.w3.org/2000/svg">
-				<g id="humaaans"  fillRule="evenodd" strokeWidth="1">
-					<g id={`a-${posture}-human`} 
-						transform={`${horizontalDirectionModifier} ${heightAdjustFromPosture}`}>
+      <svg height={height} 
+      width={size || DEFAULT_WIDTH_IN_PX} 
+      version="1.1" 
+      viewBox={viewBox} 
+      xmlns="http://www.w3.org/2000/svg">
+        <g id="humaaans"  fillRule="evenodd" strokeWidth="1">
+          <g id={`a-${posture}-human`} 
+          transform={`${horizontalDirectionModifier} ${heightAdjustmentFromPosture}`}>
             <g id="HEAD" transform="translate(82.000000, 0.000000)">
               <Head />
             </g>
@@ -106,9 +106,9 @@ class Human extends React.Component {
             <g id="TORSO" transform="translate(22.000000, 82.000000)">
               <Torso />
             </g>
-					</g>
-				</g>
-			</svg>
+          </g>
+        </g>
+      </svg>
 		)
 	}
 }
@@ -121,7 +121,6 @@ Human.propTypes = {
   bottom: PropTypes.string,
   posture: PropTypes.string,
   direction: PropTypes.string,
-
 }
 
 export default Human;
